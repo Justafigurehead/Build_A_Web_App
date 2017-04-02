@@ -48,6 +48,7 @@
     });
  };
 
+
  PieChart.prototype = {
     getAllFemalesCount: function(students){
       var i = 0;

@@ -13,9 +13,18 @@ var requestComplete = function(){
   var jsonString = this.responseText;
   var studentData = JSON.parse(jsonString);
   // return studentData;
-  new PieChart(studentData);
+  var buttons = document.querySelectorAll('button');
+  buttonHandler(buttons);
 };
 
+var buttonHandler = function(buttons){
+  buttons.forEach(function(button){
+   if button.click
+  })
+  };
+});
+
+};
 
 
 var app = function(){
