@@ -12,8 +12,9 @@ var requestComplete = function(){
 
   var jsonString = this.responseText;
   var studentData = JSON.parse(jsonString);
-  // return studentData;
-  // new PieChart(studentData);
+
+  new PieChart(studentData);
+
   var buttonHandler = function(){
     // var btnSelected = (this.id);
     switch(this.id){
@@ -23,6 +24,7 @@ var requestComplete = function(){
       break;
     case 'student-houses':
       console.log("student-houses", 'click');
+      new ColumnChart(studentData);
       break;
     case 'studentvsStaff':
       console.log("staff-student-ratio", "click");
@@ -31,8 +33,8 @@ var requestComplete = function(){
   };
 
   var genderBtn = document.querySelector('#student-gender').onclick = buttonHandler;
-  var studentvsStaff = document.querySelector('#staff-student-ratio').addEventListener('click', buttonHandler);
-  var studentHouses = document.querySelector('#student-houses');
+  var studentvsStaff = document.querySelector('#staff-student-ratio').onclick = buttonHandler;
+  var studentHouses = document.querySelector('#student-houses').onclick = buttonHandler;
 
 };
 

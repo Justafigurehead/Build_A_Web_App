@@ -11,9 +11,8 @@ body {
   justify-content: center;
   align-content: center;
   width:100%;
-  background:url('/image/troy-jarrell-57698.jpg') center top no-repeat; 
+  background:url('http://imgur.com/TUqPKG6.png') repeat; 
   text-align:left;
-  background-size: cover;
   }
 
 main {

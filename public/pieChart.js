@@ -3,7 +3,7 @@
  var PieChart = function(data){
   this.data = data;
 
-  var container = document.querySelector('#pie-chart');
+  var container = document.querySelector('#charts');
 
     var chart = new Highcharts.Chart({
       chart:{
@@ -62,7 +62,6 @@
     getAllMalesCount: function(students){
       var i = 0;
       students.forEach(function(student){
-        console.log(student)
         if (student.gender == "male"){
           i++
         };
