@@ -13,18 +13,29 @@ var requestComplete = function(){
   var jsonString = this.responseText;
   var studentData = JSON.parse(jsonString);
   // return studentData;
-  var buttons = document.querySelectorAll('button');
-  buttonHandler(buttons);
-};
-
-var buttonHandler = function(buttons){
-  buttons.forEach(function(button){
-   if button.click
-  })
+  // new PieChart(studentData);
+  var buttonHandler = function(){
+    // var btnSelected = (this.id);
+    switch(this.id){
+    case 'student-gender':
+      console.log("student-gender", "click");
+      new PieChart(studentData);
+      break;
+    case 'student-houses':
+      console.log("student-houses", 'click');
+      break;
+    case 'studentvsStaff':
+      console.log("staff-student-ratio", "click");
+      break;
+    };
   };
-});
+
+  var genderBtn = document.querySelector('#student-gender').onclick = buttonHandler;
+  var studentvsStaff = document.querySelector('#staff-student-ratio').addEventListener('click', buttonHandler);
+  var studentHouses = document.querySelector('#student-houses');
 
 };
+
 
 
 var app = function(){

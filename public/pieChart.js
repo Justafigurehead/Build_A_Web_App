@@ -36,7 +36,7 @@
         {
           name: "Male", 
           y: this.getAllMalesCount(data),
-          color:"tomato"
+          color:"#84B1ED"
         }, 
         {
           name: "Female", 
