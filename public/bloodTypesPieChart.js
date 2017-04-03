@@ -46,7 +46,8 @@
         {
           name:"Half-bloods", 
           y: bloodtypes[1],
-          color: "saddlebrown"
+          color: "saddlebrown",
+          splice: true
         }
         ]
       }]

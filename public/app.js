@@ -16,14 +16,17 @@ var requestComplete = function(){
   new PieChart(studentData);
 
   var buttonHandler = function(){
+    // var btnSelected = (this.id);
     switch(this.id){
     case 'student-gender':
+      console.log("student-gender", "click");
       new PieChart(studentData);
       break;
     case 'student-houses':
+      console.log("student-houses", 'click');
       new ColumnChart(studentData);
       break;
-    case 'studentvsStaff':
+    case 'staff-student-ratio':
       new BPieChart(studentData);
       console.log("staff-student-ratio", "click");
       break;
@@ -39,7 +42,8 @@ var requestComplete = function(){
 
 
 var app = function(){
- 
+  var url = "http://hp-api.herokuapp.com/api/characters/students";
+  makeRequest(url, requestComplete);
 };
 
 window.onload = app;
